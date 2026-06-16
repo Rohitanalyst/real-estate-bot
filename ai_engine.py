@@ -91,10 +91,6 @@ def get_client() -> OpenAI:
 
 def get_model_name() -> str:
     """Get the model name to use."""
-    if config.GOOGLE_API_KEY and config.AI_MODEL == "gemini-3-flash-preview":
-        return "gemini-2.0-flash"  # Default free model
-    if config.GOOGLE_API_KEY:
-        return config.AI_MODEL
     return config.AI_MODEL
 
 
@@ -137,10 +133,16 @@ def get_ai_response(conversation_history: list, user_message: str, max_retries: 
 def _parse_response(response_text: str) -> Tuple[str, Dict]:
     """Parse AI response text into message and metadata."""
     # Clean up markdown code blocks if present
-    if response_text.startswith("```"):
+    if "```" in response_text:
         lines = response_text.split("\n")
         lines = [l for l in lines if not l.strip().startswith("```")]
         response_text = "\n".join(lines)
+
+    # Try to find JSON in the response (model sometimes adds text before/after)
+    json_start = response_text.find("{")
+    json_end = response_text.rfind("}") + 1
+    if json_start != -1 and json_end > json_start:
+        response_text = response_text[json_start:json_end]
 
     try:
         parsed = json.loads(response_text)

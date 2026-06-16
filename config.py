@@ -14,7 +14,7 @@ load_dotenv()
 # Uses Google Gemini (FREE) via OpenAI-compatible endpoint
 # Only needs GOOGLE_API_KEY from https://aistudio.google.com/apikey
 # ============================================================
-AI_MODEL = os.getenv("AI_MODEL", "gemini-2.0-flash")
+AI_MODEL = os.getenv("AI_MODEL", "gemini-2.5-flash-lite")
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 OPENAI_API_BASE = os.getenv("OPENAI_API_BASE", "")
