@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.env
+leads.db
+bot.log
+*.zip

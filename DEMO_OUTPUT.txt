@@ -1,0 +1,59 @@
+============================================================
+🏠 LIVE DEMO: Real Estate Lead Qualification Agent
+   Agent: Alex from Premium Properties
+   AI Model: gemini-3-flash-preview (FREE)
+============================================================
+
+🤖 Alex: Hi there! 👋 I'm Alex, your real estate assistant from Premium Properties.
+         I'd love to help you find your perfect property! Whether you're looking 
+         to buy, rent, or just exploring options, I'm here to help.
+         What brings you here today?
+
+👤 User: Hey! I want to buy an apartment
+
+🤖 Alex: That's exciting! I'd love to help you find the right place. To get 
+         started, may I ask what your name is?
+   📊 Extracted: property_type = apartment
+
+👤 User: My name is Raj, I live in Mumbai
+
+🤖 Alex: It's great to meet you, Raj! Since you're currently in Mumbai, are you 
+         looking to buy your new apartment there, or do you have another area in mind?
+   📊 Extracted: name = Raj, location = Mumbai
+
+👤 User: Budget is around 80 lakhs to 1.2 crore
+
+🤖 Alex: Thanks for sharing that, Raj. That's a solid budget for the Mumbai market. 
+         When are you hoping to make the move into your new apartment?
+   📊 Extracted: budget = INR 80,00,000 - 1,20,00,000
+
+👤 User: I want to move in within 2 months, looking in Andheri or Bandra area
+
+🤖 Alex: That's a quick timeline, Raj! Andheri and Bandra are both fantastic choices 
+         with a lot of energy. How many bedrooms and bathrooms are you looking for?
+   📊 Extracted: timeline = 2 months, location = Andheri/Bandra
+   🎯 Lead Score: 🔥 HOT
+
+👤 User: 2 BHK with a balcony and parking would be perfect
+
+🤖 Alex: Got it, a 2 BHK with a balcony and parking in those areas sounds lovely! 
+         Just to be sure, how many bathrooms would you prefer?
+   📊 Extracted: bedrooms = 2, special = balcony + parking
+   🎯 Lead Score: 🔥 HOT
+
+============================================================
+FINAL LEAD PROFILE:
+============================================================
+   Name:     Raj
+   Score:    🔥 HOT
+   Budget:   INR 80 Lakhs - 1.2 Crore
+   Location: Andheri, Bandra (Mumbai)
+   Timeline: 2 months
+   Property: 2 BHK Apartment
+   Special:  Balcony, Parking
+   Status:   QUALIFIED → Ready for agent follow-up!
+============================================================
+
+This conversation happened automatically via AI.
+No human agent was involved.
+The lead is now stored in the database and ready for your sales team.
